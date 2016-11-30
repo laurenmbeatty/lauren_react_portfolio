@@ -1,24 +1,373 @@
+
+@font-face {
+    font-family: "architects_daughter";
+    src: url("../public/fonts/architects_daughter/ArchitectsDaughter.ttf") format("truetype");
+}
+
+body, html {
+    background-color: #f3f3f3;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 .App {
+    display: flex;
+    flex-direction: column;
+    background-color: papayawhip;
+}
+
+
+/*Header*/
+
+.site-header {
+    width: 100%;
+    margin: -50px auto 0 auto;
+    height: 50px;
+    background-color: #c5376d;
+    position: absolute;
+    z-index: 3;
+    -webkit-transition: height 500ms;
+    -o-transition: height 500ms;
+    transition: height 500ms;
+}
+
+
+/*Triangle*/
+
+.menu-toggle {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    top: 40px;
+    left: calc(50% - 75px);
+    background: #c5376d;
+    -webkit-transform: translateY(-50%) rotate(45deg);
+    -moz-transform: translateY(-50%) rotate(45deg);
+    -o-transform: translateY(-50%) rotate(45deg);
+    -ms-transform: translateY(-50%) rotate(45deg);
+    transform: translateY(-50%) rotate(45deg);
+}
+button {
+    outline: none;
+}
+
+
+/*xTriangle*/
+
+
+/*Hamburger*/
+
+.hamburger {
+    position: relative;
+    left: calc(50% - 5px);
+    top: 50%;
+    color: papayawhip;
+    transform: rotate(-45deg);
+}
+
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    background-color: papayawhip;
+}
+
+.hamburger.hamburger--spin.is-active {
+    outline: none;
+}
+
+.hamburger.hamburger--spin {
+    outline: none;
+}
+
+
+/*xHamburger*/
+
+
+/*Navigation*/
+
+.slidedown-menu {
+    overflow: auto;
+    color: #4a4a4a;
+    background: #c5376d;
+    position: relative;
+    z-index: 999;
+    display: none;
+    margin: 1% auto;
+    text-align: center;
+}
+.slidedown-menu.active {
+   display: block;
+}
+.site-header.visible {
+    height: 2000px;
+}
+
+.nav-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.nav-list li {
+    color: papaywhip;
+    font-size: 2em;
+    margin-bottom: 7%;
+    text-transform: uppercase;
+}
+
+.nav-list li a {
+    color: papayawhip;
+    text-decoration: none;
+}
+.nav-list li a:hover {
+    text-decoration: underline;
+}
+
+
+/*xNavigation*/
+
+
+/*xHeader*/
+
+
+/*Main*/
+
+main {
+    background-color: papayawhip;
+    height: 2000px;
+    width: 100%;
+    margin: 0 auto;
+}
+.Typist p {
   text-align: center;
+  margin-top: 175px;
+  font-family: "architects_daughter";
+  font-size: 30px;
+  line-height: 2;
+  color: #c5376d;
+}
+.Cursor {
+  display: none;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+/*Portfolio*/
+
+.portfolio-container {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    margin: 10% auto 0 auto;
+    align-items: center;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.portfolio-item {
+    margin: 0 0 20px 0;
+    width: 400px;
+    height: 288px;
+    position: relative;
 }
 
-.App-intro {
-  font-size: large;
+.portfolio-skills {
+    width: 400px;
+    height: 0;
+    transform: translate(0, -100%);
+    background: #256a98;
+    color: papayawhip;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: height 0.5s ease;
+}
+.portfolio-skills.active{
+  height: 288px;
+}
+.portfolio-skills-container {
+    position: relative;
+    top: 50%;
+    text-align: center;
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.portfolio-image {
+    background: url("../public/images/toro-ipad.png") no-repeat;
+    background-position: center center;
+    background-size: contain;
+    width: 400px;
+    height: 288px;
+}
+
+.portfolio-button {
+    position: absolute;
+    left: 88%;
+    bottom: 42%;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: none;
+    z-index: 2;
+    text-align: center;
+    background-color: #c5376d;
+    transition: background-color 0.1s ease-in-out;
+    -webkit-appearance: none;
+    cursor: pointer;
+    outline: none;
+}
+.portfolio-button.active {
+  background-color: papayawhip;
+  -webkit-appearance: none;
+  outline: none;
+}
+.fa.fa-plus {
+  color: papayawhip;
+  font-size: 1.5em;
+  transition: all 0.3s ease-in-out;
+}
+.fa.fa-plus.active {
+  color: #256a98;
+  transform: rotate(224deg);
+}
+
+
+/*Writings*/
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700);
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+
+/*html { background: radial-gradient(ellipse at top, #40485a 0%, #282e3a 60%);  height: 100%; width: 100%; }
+
+body { height: 100%; width: 100%; overflow:hidden;}*/
+
+.writings-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 50px auto 0;
+}
+
+.envelope {
+    margin: 100px auto 140px;
+    position: relative;
+    width: 0;
+    height: 0;
+    z-index: 0;
+    border-style: solid;
+    border-width: 0 150px 100px 150px;
+    border-color: transparent transparent #256a98 transparent;
+    box-shadow: 0 100px 0 0 #256a98, 0 150px 90px 0 rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.envelope:after, .envelope:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 100px;
+    border-style: solid;
+}
+
+.envelope:after {
+    width: 0;
+    height: 0;
+    left: 0;
+    border-width: 100px 150px 100px 0;
+    border-color: transparent #2a7fb5 transparent transparent;
+}
+
+.envelope:before {
+    width: 210px;
+    height: 180px;
+    left: -150px;
+    border-width: 200px 0 0 300px;
+    border-color: transparent transparent transparent #3596da;
+}
+
+.card.active {
+    top: -20px;
+}
+
+
+/*.envelope:hover .card {
+     top: -20px;
+}*/
+
+.card {
+    width: 260px;
+    height: 220px;
+    position: absolute;
+    top: 70px;
+    left: -130px;
+    z-index: -1;
+    background: #dcdcdc;
+    border-radius: 5px;
+    transition: top 0.5s ease-in-out;
+    font: bold 1.2em/1.1em 'Open Sans Condensed', sans-serif;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 100px 0 0 0;
+    color: #919499;
+}
+
+.card p {
+    width: 150px;
+    margin: 0 auto;
+}
+
+.heart {
+    position: relative;
+    width: 100px;
+    height: 90px;
+    left: 80px;
+    bottom: 160px;
+}
+
+.heart:before, .heart:after {
+    position: absolute;
+    content: "";
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background: palevioletred;
+    -moz-border-radius: 50px 50px 0 0;
+    border-radius: 50px 50px 0 0;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+    -moz-transform-origin: 0 100%;
+    -ms-transform-origin: 0 100%;
+    -o-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+}
+
+.heart:after {
+    left: 0;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transform-origin: 100% 100%;
+    -moz-transform-origin: 100% 100%;
+    -ms-transform-origin: 100% 100%;
+    -o-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+}
+
+
+/*xMain*/
+
+@media screen and (max-width: 600px) {
+    .portfolio-container {
+        justify-content: center;
+        margin-top: 27%;
+    }
 }
