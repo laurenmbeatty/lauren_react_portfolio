@@ -190,7 +190,7 @@ main {
 }
 
 .portfolio-image {
-    background: url("../public/images/toro-ipad.png") no-repeat;
+    /*background: url("../public/images/toro-ipad.png") no-repeat;*/
     background-position: center center;
     background-size: contain;
     width: 400px;

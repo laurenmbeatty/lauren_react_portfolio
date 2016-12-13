@@ -1,57 +1,90 @@
 import React from 'react';
+import toro from '../../images/toro-ipad.png';
+import classNames from 'classnames';
+//import PortfolioItem from './PortfolioItem';
 
+const propTypes = {
+   skillState: React.PropTypes.string,
+   backgroundImage: React.PropTypes.string,
+   buttonState: React.PropTypes.string,
+   iconState: React.PropTypes.string,
+   skillsState: React.PropTypes.string,
+   skill: React.PropTypes.string,
+   selected: React.PropTypes.bool
+}
 
+const defaultProps = {
+  skillState: 'portfolio-skills',
+  buttonState: 'portfolio-button',
+  iconState: 'fa fa-plus',
+  skillsState: 'portfolio-skills',
+  selected: false
+}
 class PortfolioPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      buttonState: 'portfolio-button',
-      iconState: 'fa fa-plus',
-      skillsState: 'portfolio-skills',
+      activeIndex: null,
       selected: false
     };
 
     // This binding is necessary to make `this` work in the callback
     this.buttonClick = this.buttonClick.bind(this);
   }
-  buttonClick(event) {
 
-        if (this.state.buttonState === 'portfolio-button'){
-            this.setState({
-              buttonState: 'portfolio-button active',
-              iconState: 'fa fa-plus active',
-              skillsState: 'portfolio-skills active'
-            });
+//see if the index matches, then show
+  buttonClick(event, item, index) {
 
-        } else {
-            this.setState({
-              buttonState: 'portfolio-button',
-              iconState: 'fa fa-plus',
-              skillsState: 'portfolio-skills'
-            });
-        }
+      if(this.state.selected === true){
+        this.setState({
+          selected: false
+        });
+      } else {
+        this.setState({
+          selected: true
+        });
+      }
+
+      console.log(this.props.selected);
+
   }
+
+
   render() {
+    let btnClass = classNames({
+      'portfolio-button': true,
+      'portfolio-button active': this.state.selected
+    });
+
+    let iconClass = classNames({
+      'fa fa-plus': true,
+      'fa fa-plus active': this.state.selected
+    });
+
+    let portfolioClass = classNames({
+      'portfolio-skills': true,
+      'portfolio-skills active': this.state.selected
+    });
 
     const portfolioItems = [
       {
-        backgroundImage: '../public/images/toro-ipad.png',
+        backgroundImage: `url(${toro})`,
         skillsStrengthened: ["ExtJS", "ColdFusion", "Microsoft SQL", "Sass"]
       },
       {
-        backgroundImage: '../public/images/toro-ipad.png',
+        backgroundImage: `url(${toro})`,
         skillsStrengthened: ["HTML", "CSS", "RequireJS", "JavaScript", "jQuery", "Responsive Design"]
       },
       {
-        backgroundImage: '../public/images/toro-ipad.png',
+        backgroundImage: `url(${toro})`,
         skillsStrengthened: ["HTML", "CSS", "RequireJS", "JavaScript", "jQuery", "Responsive Design"]
       },
       {
-        backgroundImage: '../public/images/toro-ipad.png',
+        backgroundImage: `url(${toro})`,
         skillsStrengthened: ["HTML", "CSS", "RequireJS", "JavaScript", "jQuery", "Responsive Design"]
       },
       {
-        backgroundImage: '../public/images/toro-ipad.png',
+        backgroundImage: `url(${toro})`,
         skillsStrengthened: ["HTML", "CSS", "RequireJS", "JavaScript", "jQuery", "Responsive Design"]
       },
    ];
@@ -60,16 +93,17 @@ class PortfolioPage extends React.Component {
       <main>
           <div className="portfolio-container">
             {portfolioItems.map(function(item, index){
-              return <div className="portfolio-item" key={ index } data={ index } onClick={this.buttonClick}>
-                        <button key={ index } className={this.state.buttonState}>
+              return <div className="portfolio-item" key={ index } selected={ this.state.activeIndex === index } onClick={(key) => this.buttonClick(index)}>
+                        <button className={btnClass} selected={ this.state.activeIndex === index }>
                           <div className="button-icon">
-                            <i className={this.state.iconState}   id={ index }   aria-hidden="true"></i>
+                            <i className={iconClass} selected={ this.state.activeIndex === index } aria-hidden="true"></i>
                           </div>
                         </button>
                         <div className="portfolio-image" style={{background: item.backgroundImage }}>
 
                         </div>
-                        <div className={this.state.skillsState}>
+
+                        <div className={portfolioClass} selected={ this.state.activeIndex === index }>
                             <div className="portfolio-skills-container">
                                 <p>
                                     Skills Strengthened:
@@ -89,6 +123,12 @@ class PortfolioPage extends React.Component {
     );
 
   }
+
+
+
 }
+
+PortfolioPage.propTypes = propTypes;
+PortfolioPage.defaultProps = defaultProps;
 
 export default PortfolioPage;
