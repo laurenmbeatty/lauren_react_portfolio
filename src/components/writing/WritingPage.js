@@ -1,69 +1,71 @@
 import React from 'react';
-
+import Envelope from './Envelope';
 
 class WritingPage extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      activeIndex: null
+    }
+    console.log(this.state.activeIndex);
+    // This binding is necessary to make `this` work in the callback
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick(index) {
+    console.log(index);
+    if(this.state.activeIndex === null ){
+      this.setState({
+        activeIndex: index
+      });
+    } else {
+      this.setState({
+        activeIndex: null
+      });
+    }
+    //console.log(this.state.activeIndex);
+  }
+
   render() {
+    //data
+    const envelopeInfo = [
+      {
+        url: "https://collaborate2016.zerista.com/event/member/235430",
+        title: "Introduction to Oracle JET",
+        location: "Collaborate 2016"
+      },
+      {
+        url: "http://cfour.fishbowlsolutions.com/2016/07/12/oracle-jet-requirejs/",
+        title: "Oracle JET and RequireJS",
+        location: "C4 Blog"
+      },
+      {
+        url: "http://prairiecode.amegala.com/sessions/an-introduction-to-oracle-jet-javascript-extension-toolkit",
+        title: "Introduction to Oracle JET",
+        location: "Prairie.Code()"
+      },
+      {
+        url: "http://cfour.fishbowlsolutions.com/2016/02/26/favorite-things/",
+        title: "Ultimate Productivity",
+        location: "C4 Blog"
+      },
+      {
+        url: "http://cfour.fishbowlsolutions.com/2016/03/28/designers-introduction-oracle-jet/",
+        title: "Introduction to Oracle JET",
+        location: "C4 Blog"
+      }
+    ];
+
     return (
-      <main>
+
           <div className="writings-content-wrapper">
-              <div className="envelope">
-                  <div className="card">
-                      <p><a href="https://collaborate2016.zerista.com/event/member/235430" target="_blank">Introduction to Oracle JET</a></p>
-                      <p>
-                        Collaborate 2016
-                      </p>
-                      <div className="heart"></div>
-                  </div>
-              </div>
-              <div className="envelope">
-                  <div className="card">
-                      <p>
-                        <a href="http://cfour.fishbowlsolutions.com/2016/07/12/oracle-jet-requirejs/" target="_blank">Oracle JET and RequireJS</a>
-                      </p>
-                      <p>
-                        C4 Blog
-                      </p>
-                      <div className="heart"></div>
-                  </div>
-              </div>
-              <div className="envelope">
-                  <div className="card">
-                      <p>
-                        <a href="http://prairiecode.amegala.com/sessions/an-introduction-to-oracle-jet-javascript-extension-toolkit" target="_blank">Introduction to Oracle JET</a>
-                      </p>
-                      <p>Prairie.Code()</p>
-                      <div className="heart"></div>
-                  </div>
-              </div>
-              <div className="envelope">
-                  <div className="card">
-                      <p>
-                        <a href="http://cfour.fishbowlsolutions.com/2016/02/26/favorite-things/" target="_blank">Ultimate Productivity</a>
-                      </p>
-                      <p>
-                        C4 Blog
-                      </p>
-                      <div className="heart"></div>
-                  </div>
-              </div>
-              <div className="envelope">
-                  <div className="card">
-                      <p>
-                        <a href="http://cfour.fishbowlsolutions.com/2016/03/28/designers-introduction-oracle-jet/" target="_blank">Introduction to Oracle JET</a>
-                      </p>
-                      <p>
-                        C4 Blog
-                      </p>
-                      <div className="heart"></div>
-                  </div>
-              </div>
+              {envelopeInfo.map((envelope, index) => (
+                <Envelope {...envelope} isActive={this.state.activeIndex===index} index={index} key={index} onClick={this.handleClick.bind(this)}/>
+              ))};
           </div>
-      </main>
+      
     );
   }
 }
 
 export default WritingPage;
-//This could be a stateless functional component, too
-//having a className-based component at the top
-//enables hot-reloading

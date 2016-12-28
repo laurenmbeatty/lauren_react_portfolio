@@ -93,7 +93,7 @@ class PortfolioPage extends React.Component {
       <main>
           <div className="portfolio-container">
             {portfolioItems.map(function(item, index){
-              return <div className="portfolio-item" key={ index } selected={ this.state.activeIndex === index } onClick={(key) => this.buttonClick(index)}>
+              return <div className="portfolio-item" id={`item-${index}`} index={index} key={ index } selected={ this.state.activeIndex === index } onClick={(key) => this.buttonClick(index)}>
                         <button className={btnClass} selected={ this.state.activeIndex === index }>
                           <div className="button-icon">
                             <i className={iconClass} selected={ this.state.activeIndex === index } aria-hidden="true"></i>
