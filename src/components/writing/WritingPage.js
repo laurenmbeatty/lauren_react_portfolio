@@ -5,25 +5,17 @@ class WritingPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      activeIndex: null
+      activeIndex: 0
     }
-    console.log(this.state.activeIndex);
     // This binding is necessary to make `this` work in the callback
     this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick(index) {
-    console.log(index);
-    if(this.state.activeIndex === null ){
       this.setState({
         activeIndex: index
       });
-    } else {
-      this.setState({
-        activeIndex: null
-      });
-    }
-    //console.log(this.state.activeIndex);
+
   }
 
   render() {
@@ -40,7 +32,7 @@ class WritingPage extends React.Component {
         location: "C4 Blog"
       },
       {
-        url: "http://prairiecode.amegala.com/sessions/an-introduction-to-oracle-jet-javascript-extension-toolkit",
+        url: "http://prairiecode.amegala.com",
         title: "Introduction to Oracle JET",
         location: "Prairie.Code()"
       },
@@ -54,16 +46,16 @@ class WritingPage extends React.Component {
         title: "Introduction to Oracle JET",
         location: "C4 Blog"
       }
-    ];
+    ]
 
     return (
-
+      <main>
           <div className="writings-content-wrapper">
               {envelopeInfo.map((envelope, index) => (
-                <Envelope {...envelope} isActive={this.state.activeIndex===index} index={index} key={index} onClick={this.handleClick.bind(this)}/>
-              ))};
+                <Envelope {...envelope} isActive={this.state.activeIndex===index} index={index} key={index} onToggle={this.handleClick.bind(null, index, this)}/>
+              ))}
           </div>
-      
+      </main>
     );
   }
 }

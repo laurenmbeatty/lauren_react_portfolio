@@ -12,7 +12,7 @@ class Envelope extends React.Component {
   }
 
   handleClick() {
-    this.props.onClick(this.props.index);
+    this.props.onToggle(this.props.index);
   }
 
   render() {
