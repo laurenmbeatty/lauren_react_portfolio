@@ -1,4 +1,3 @@
-
 @font-face {
     font-family: "architects_daughter";
     src: url("../public/fonts/architects_daughter/ArchitectsDaughter.ttf") format("truetype");
@@ -50,6 +49,7 @@ body, html {
     -ms-transform: translateY(-50%) rotate(45deg);
     transform: translateY(-50%) rotate(45deg);
 }
+
 button {
     outline: none;
 }
@@ -96,9 +96,11 @@ button {
     margin: 1% auto;
     text-align: center;
 }
+
 .slidedown-menu.active {
-   display: block;
+    display: block;
 }
+
 .site-header.visible {
     height: 2000px;
 }
@@ -118,8 +120,9 @@ button {
 .nav-list li a {
     color: papayawhip;
     text-decoration: none;
-    font-family: "Open Sans", sans-serif;
+    font-family: "architects_daughter";
 }
+
 .nav-list li a:hover {
     text-decoration: underline;
 }
@@ -140,17 +143,20 @@ main {
     margin: 0 auto;
     font-family: "Open Sans", sans-serif;
 }
+
 .Typist p {
-  text-align: center;
-  margin-top: 175px;
-  font-family: "architects_daughter";
-  font-size: 30px;
-  line-height: 2;
-  color: #c5376d;
+    text-align: center;
+    margin-top: 175px;
+    font-family: "architects_daughter";
+    font-size: 30px;
+    line-height: 2;
+    color: #c5376d;
 }
+
 .Cursor {
-  display: none;
+    display: none;
 }
+
 
 /*Portfolio*/
 
@@ -179,17 +185,25 @@ main {
     overflow: hidden;
     transition: height 0.5s ease;
 }
+
 .portfolio-skills h2 {
-  margin-top: 0;
+    margin-top: 0;
+    font-family: "architects_daughter";
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-weight: normal;
 }
-.portfolio-skills  ul {
-  list-style: none;
-  padding-left: 0;
+
+.portfolio-skills ul {
+    list-style: none;
+    padding-left: 0;
 }
-.portfolio-skills.active{
-  height: 288px;
-  padding: 20px 30px 20px 40px;
+
+.portfolio-skills.active {
+    height: 288px;
+    padding: 20px 30px 20px 40px;
 }
+
 .portfolio-skills-container {
     position: relative;
     top: 50%;
@@ -222,19 +236,22 @@ main {
     cursor: pointer;
     outline: none;
 }
+
 .portfolio-button.active {
-  background-color: papayawhip;
-  -webkit-appearance: none;
-  outline: none;
+    background-color: papayawhip;
+    -webkit-appearance: none;
+    outline: none;
 }
+
 .fa.fa-plus {
-  color: papayawhip;
-  font-size: 1.5em;
-  transition: all 0.3s ease-in-out;
+    color: papayawhip;
+    font-size: 1.5em;
+    transition: all 0.3s ease-in-out;
 }
+
 .fa.fa-plus.active {
-  color: #256a98;
-  transform: rotate(224deg);
+    color: #256a98;
+    transform: rotate(224deg);
 }
 
 
@@ -323,18 +340,20 @@ body { height: 100%; width: 100%; overflow:hidden;}*/
 }
 
 .card p {
-    width: 150px;
     margin: 0 auto;
 }
+
 .card p a {
-  color: #256a98;
+    color: #256a98;
+    font-family: "architects_daughter";
 }
+
 .heart {
-    position: relative;
+    position: absolute;
     width: 100px;
     height: 90px;
     left: 80px;
-    bottom: 160px;
+    bottom: 120px;
 }
 
 .heart:before, .heart:after {
