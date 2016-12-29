@@ -26,24 +26,34 @@ class PortfolioPage extends React.Component {
     //data
     const portfolioItems = [
       {
+        project: 'Toro Timecards Application',
         backgroundImage: `url(${toro})`,
-        skillsStrengthened: ["ExtJS  ", "ColdFusion  ", "Microsoft SQL  ", "Sass  "]
+        skillsStrengthened: ["ExtJS", "ColdFusion", "Microsoft SQL", "Sass"]
       },
       {
+        project: 'Anthem, Inc. Intranet Re-design',
         backgroundImage: `url(${toro})`,
-        skillsStrengthened: ["HTML  ", "CSS  ", "RequireJS  ", "JavaScript  ", "jQuery  ", "Responsive Design  "]
+        skillsStrengthened: ["HTML", "CSS", "RequireJS", "Accessibility", "JavaScript", "jQuery", "Responsive Design"]
       },
       {
+        project: 'Cox Enterprises Intranet Re-design',
         backgroundImage: `url(${toro})`,
-        skillsStrengthened: ["HTML  ", "CSS  ", "RequireJS  ", "JavaScript  ", "jQuery  ", "Responsive Design  "]
+        skillsStrengthened: ["HTML", "CSS", "RequireJS", "JavaScript", "jQuery", "Responsive Design"]
       },
       {
+        project: 'Lauren Beatty Personal Website',
         backgroundImage: `url(${toro})`,
-        skillsStrengthened: ["HTML  ", "CSS  ", "RequireJS  ", "JavaScript  ", "jQuery  ", "Responsive Design  "]
+        skillsStrengthened: ["React", "CSS", "Animations", "JavaScript", "Responsive Design"]
       },
       {
+        project: 'Rêve Academy Social Skills Assessment',
         backgroundImage: `url(${toro})`,
-        skillsStrengthened: ["HTML  ", "CSS  ", "RequireJS  ", "JavaScript  ", "jQuery  ", "Responsive Design  "]
+        skillsStrengthened: ["Angular", "Angular Charts", "Node", "Express", "MySQL", "EJS Templates", "Responsive Design"]
+      },
+      {
+        project: 'Social Story Generator',
+        backgroundImage: `url(${toro})`,
+        skillsStrengthened: ["HTML", "CSS", "JavaScript", "jQuery", "Responsive Design"]
       }
    ];
 

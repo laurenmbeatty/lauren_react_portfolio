@@ -177,13 +177,20 @@ main {
     overflow: hidden;
     transition: height 0.5s ease;
 }
+.portfolio-skills h2 {
+  margin-top: 0;
+}
+.portfolio-skills  ul {
+  list-style: none;
+  padding-left: 0;
+}
 .portfolio-skills.active{
   height: 288px;
+  padding: 20px 30px 20px 40px;
 }
 .portfolio-skills-container {
     position: relative;
     top: 50%;
-    text-align: center;
     -ms-transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);

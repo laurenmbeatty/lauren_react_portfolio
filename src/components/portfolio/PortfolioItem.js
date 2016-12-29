@@ -30,6 +30,7 @@ class PortfolioItem extends React.Component {
           </div>
           <div className={this.props.isActive ? 'portfolio-skills active' : 'portfolio-skills'}>
               <div className="portfolio-skills-container">
+                  <h2>{this.props.project}</h2>
                   <p>
                       Skills Strengthened:
                   </p>
