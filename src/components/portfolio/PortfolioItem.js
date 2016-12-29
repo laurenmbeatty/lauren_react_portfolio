@@ -13,8 +13,11 @@ class PortfolioItem extends React.Component {
     this.props.onClick(this.props.index);
   }
 
-  render() {
 
+
+
+  render() {
+    let skillsStrengthened = [...this.props.skillsStrengthened];
     return (
       <div className="portfolio-item" onClick={this.handleClick.bind(this)}>
           <button className={this.props.isActive ? 'portfolio-button active' : 'portfolio-button'}>
@@ -31,7 +34,11 @@ class PortfolioItem extends React.Component {
                       Skills Strengthened:
                   </p>
                   <ul>
-                    <li>{this.props.skill}</li>
+                    {skillsStrengthened.map((skillsStrengthened, index) =>
+
+                      <li>{this.props.skillsStrengthened[index]}</li>
+
+                    )}
                   </ul>
               </div>
           </div>

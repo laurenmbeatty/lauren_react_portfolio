@@ -27,32 +27,32 @@ class PortfolioPage extends React.Component {
     const portfolioItems = [
       {
         backgroundImage: `url(${toro})`,
-        skillsStrengthened: ["ExtJS", "ColdFusion", "Microsoft SQL", "Sass"]
+        skillsStrengthened: ["ExtJS  ", "ColdFusion  ", "Microsoft SQL  ", "Sass  "]
       },
       {
         backgroundImage: `url(${toro})`,
-        skillsStrengthened: ["HTML", "CSS", "RequireJS", "JavaScript", "jQuery", "Responsive Design"]
+        skillsStrengthened: ["HTML  ", "CSS  ", "RequireJS  ", "JavaScript  ", "jQuery  ", "Responsive Design  "]
       },
       {
         backgroundImage: `url(${toro})`,
-        skillsStrengthened: ["HTML", "CSS", "RequireJS", "JavaScript", "jQuery", "Responsive Design"]
+        skillsStrengthened: ["HTML  ", "CSS  ", "RequireJS  ", "JavaScript  ", "jQuery  ", "Responsive Design  "]
       },
       {
         backgroundImage: `url(${toro})`,
-        skillsStrengthened: ["HTML", "CSS", "RequireJS", "JavaScript", "jQuery", "Responsive Design"]
+        skillsStrengthened: ["HTML  ", "CSS  ", "RequireJS  ", "JavaScript  ", "jQuery  ", "Responsive Design  "]
       },
       {
         backgroundImage: `url(${toro})`,
-        skillsStrengthened: ["HTML", "CSS", "RequireJS", "JavaScript", "jQuery", "Responsive Design"]
+        skillsStrengthened: ["HTML  ", "CSS  ", "RequireJS  ", "JavaScript  ", "jQuery  ", "Responsive Design  "]
       }
    ];
 
     return (
       <main>
           <div className="portfolio-container">
-            {portfolioItems.map((item, index) => (
-              <PortfolioItem {...item} isActive={this.state.activeIndex===index} index={index} key={index} onClick={this.handleClick.bind(null, index, this)}/>
-            ))};
+            {portfolioItems.map((item, index, skillsStrengthened) => (
+              <PortfolioItem {...item} {...skillsStrengthened} isActive={this.state.activeIndex===index} index={index} key={index} onClick={this.handleClick.bind(null, index, this)}/>
+            ))}
           </div>
       </main>
     );
