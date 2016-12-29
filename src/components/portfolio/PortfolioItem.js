@@ -35,11 +35,11 @@ class PortfolioItem extends React.Component {
                       Skills Strengthened:
                   </p>
                   <ul>
-                    {skillsStrengthened.map((skillsStrengthened, index) =>
+                    {skillsStrengthened.map((skillsStrengthened, index) => (
 
-                      <li>{this.props.skillsStrengthened[index]}</li>
+                      <li key={index}>{this.props.skillsStrengthened[index]}</li>
 
-                    )}
+                    ))}
                   </ul>
               </div>
           </div>
@@ -52,6 +52,7 @@ const { string } = React.PropTypes;
 
 PortfolioItem.propTypes = {
      skill: string,
+     project: string,
      backgroundImage: string,
      buttonState: string
 }

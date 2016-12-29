@@ -43,7 +43,7 @@ class PortfolioPage extends React.Component {
       {
         project: 'Lauren Beatty Personal Website',
         backgroundImage: `url(${toro})`,
-        skillsStrengthened: ["React", "CSS", "Animations", "JavaScript", "Responsive Design"]
+        skillsStrengthened: ["React", "ES6", "HTML5", "CSS", "Animations", "JavaScript", "Responsive Design"]
       },
       {
         project: 'Rêve Academy Social Skills Assessment',
