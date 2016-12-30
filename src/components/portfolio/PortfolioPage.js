@@ -1,7 +1,8 @@
 import React from 'react';
 import toro from '../../images/toro-ipad.png';
-import portfolio from '../../images/portfolio-ipad.png';
-import cox from '../../images/cox-ipad.png';
+import portfolio from '../../images/portfolio_004.png';
+import cox from '../../images/cox-ipad3.png';
+import anthem from '../../images/anthem-ipad2.png';
 import PortfolioItem from './PortfolioItem';
 
 class PortfolioPage extends React.Component {
@@ -32,7 +33,7 @@ class PortfolioPage extends React.Component {
       },
       {
         project: 'Anthem, Inc. Intranet Re-design',
-        backgroundImage: `url(${toro})`,
+        backgroundImage: `url(${anthem})`,
         skillsStrengthened: ["HTML", "CSS", "RequireJS", "Accessibility", "JavaScript", "jQuery", "Cross-Browser Testing"]
       },
       {
