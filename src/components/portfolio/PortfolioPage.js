@@ -3,6 +3,7 @@ import toro from '../../images/toro-ipad.png';
 import portfolio from '../../images/portfolio_004.png';
 import cox from '../../images/cox-ipad3.png';
 import anthem from '../../images/anthem-ipad2.png';
+import reve from '../../images/reve-ipad.png';
 import PortfolioItem from './PortfolioItem';
 
 class PortfolioPage extends React.Component {
@@ -48,7 +49,7 @@ class PortfolioPage extends React.Component {
       },
       {
         project: 'Rêve Academy',
-        backgroundImage: `url(${toro})`,
+        backgroundImage: `url(${reve})`,
         skillsStrengthened: ["Angular", "Angular Charts", "Node", "Express", "MySQL", "EJS Templates", "Responsive Design"]
       },
       {
