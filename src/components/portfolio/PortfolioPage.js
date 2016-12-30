@@ -26,7 +26,7 @@ class PortfolioPage extends React.Component {
     //data
     const portfolioItems = [
       {
-        project: 'Toro Timecards Application',
+        project: 'Toro Timecards',
         backgroundImage: `url(${toro})`,
         skillsStrengthened: ["ExtJS", "ColdFusion", "Microsoft SQL", "Sass"]
       },
@@ -41,12 +41,12 @@ class PortfolioPage extends React.Component {
         skillsStrengthened: ["HTML", "CSS", "RequireJS", "JavaScript", "jQuery", "Responsive Design", "Cross-Browser and Device Testing"]
       },
       {
-        project: 'Lauren Beatty Personal Website',
+        project: 'Personal Website',
         backgroundImage: `url(${toro})`,
         skillsStrengthened: ["React", "ES6", "HTML5", "CSS", "Animations", "JavaScript", "Responsive Design"]
       },
       {
-        project: 'Rêve Academy Social Skills Assessment',
+        project: 'Rêve Academy',
         backgroundImage: `url(${toro})`,
         skillsStrengthened: ["Angular", "Angular Charts", "Node", "Express", "MySQL", "EJS Templates", "Responsive Design"]
       },
