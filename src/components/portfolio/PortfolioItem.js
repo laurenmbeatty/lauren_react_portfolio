@@ -13,9 +13,6 @@ class PortfolioItem extends React.Component {
     this.props.onClick(this.props.index);
   }
 
-
-
-
   render() {
     let skillsStrengthened = [...this.props.skillsStrengthened];
     return (

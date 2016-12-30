@@ -13,12 +13,10 @@ class PortfolioPage extends React.Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-//see if the index matches, then show
   handleClick(index) {
       this.setState({
         activeIndex: index
       });
-      //console.log(this.props.selected);
   }
 
 
