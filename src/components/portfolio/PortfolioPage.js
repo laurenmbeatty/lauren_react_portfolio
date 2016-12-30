@@ -33,12 +33,12 @@ class PortfolioPage extends React.Component {
       {
         project: 'Anthem, Inc. Intranet Re-design',
         backgroundImage: `url(${toro})`,
-        skillsStrengthened: ["HTML", "CSS", "RequireJS", "Accessibility", "JavaScript", "jQuery", "Responsive Design"]
+        skillsStrengthened: ["HTML", "CSS", "RequireJS", "Accessibility", "JavaScript", "jQuery", "Cross-Browser Testing"]
       },
       {
         project: 'Cox Enterprises Intranet Re-design',
         backgroundImage: `url(${toro})`,
-        skillsStrengthened: ["HTML", "CSS", "RequireJS", "JavaScript", "jQuery", "Responsive Design"]
+        skillsStrengthened: ["HTML", "CSS", "RequireJS", "JavaScript", "jQuery", "Responsive Design", "Cross-Browser and Device Testing"]
       },
       {
         project: 'Lauren Beatty Personal Website',
