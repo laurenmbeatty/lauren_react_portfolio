@@ -134,6 +134,15 @@ main {
      line-height: 2;
      color: #c5376d;
 }
+.Typist p a {
+     font-family: "architects_daughter";
+     font-size: 28px;
+     color: #c5376d;
+     text-decoration: none;
+}
+.Typist p a:hover {
+     text-decoration: underline;
+}
 .Cursor {
      display: none;
 }
