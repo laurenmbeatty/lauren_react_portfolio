@@ -4,6 +4,7 @@ import portfolio from '../../images/portfolio_004.png';
 import cox from '../../images/cox-ipad3.png';
 import anthem from '../../images/anthem-ipad2.png';
 import reve from '../../images/reve-ipad.png';
+import worm from '../../images/worm-ipad.png';
 import PortfolioItem from './PortfolioItem';
 
 class PortfolioPage extends React.Component {
@@ -53,8 +54,8 @@ class PortfolioPage extends React.Component {
         skillsStrengthened: ["Angular", "Angular Charts", "Node", "Express", "MySQL", "EJS Templates", "Responsive Design"]
       },
       {
-        project: 'Social Story Generator',
-        backgroundImage: `url(${toro})`,
+        project: 'Silkworm Stories',
+        backgroundImage: `url(${worm})`,
         skillsStrengthened: ["HTML", "CSS", "JavaScript", "jQuery", "Responsive Design"]
       }
    ];
