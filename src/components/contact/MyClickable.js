@@ -1,19 +1,8 @@
 import React from 'react';
+import RaisedButton from 'material-ui/RaisedButton';
 
-
-class MyClickable extends React.Component {
-
-  handleClick() {
-    this.props.onClick(this.props.index)
-  }
-
-  render () {
-    return (
-      <button type='button' className={this.props.isActive ? 'active' : 'album'} onClick={this.handleClick.bind(this)}>
-        <span>{this.props.name}</span>
-      </button>
-    )
-  }
-}
+const MyClickable = () => (
+  <RaisedButton label="Default" />
+);
 
 export default MyClickable;

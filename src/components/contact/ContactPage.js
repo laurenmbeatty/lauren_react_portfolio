@@ -1,5 +1,4 @@
 import React from 'react';
-import MyClickable from './MyClickable';
 
 class ContactPage extends React.Component {
   constructor(props) {
@@ -15,13 +14,26 @@ class ContactPage extends React.Component {
 
   render() {
     return (
-    <main>
-      <div>
-        <MyClickable name="a" index={0} isActive={this.state.activeIndex===0} onClick={this.handleClick.bind(this)}/>
-        <MyClickable name="b" index={1} isActive={this.state.activeIndex===1} onClick={this.handleClick.bind(this)}/>
-        <MyClickable name="c" index={2} isActive={this.state.activeIndex===2} onClick={this.handleClick.bind(this)}/>
+      <main>
+        <div className="contact-page-content">
+          <p>I am a frontend developer with a background in biology and opera.</p>
+          <div className="contact-form">
+              <div className="background-container">
+                <div className="image"><a href="mailto:lauren.m.beatty@gmail.com"><i className="fa fa-envelope-o" aria-hidden="true"></i></a></div>
+              </div>
+              <div className="background-container">
+                <div className="image"><a href="https://github.com/laurenmbeatty" target="_blank"><i className="fa fa-github" aria-hidden="true"></i></a></div>
+              </div>
+              <div className="background-container">
+                <div className="image"><a href="https://www.linkedin.com/in/lmbeatty/" target="_blank"><i className="fa fa-linkedin" aria-hidden="true"></i></a></div>
+              </div>
+              <div className="background-container">
+                <div className="image"><a href="https://twitter.com/laurenbeatty13" target="_blank"><i className="fa fa-twitter" aria-hidden="true"></i></a></div>
+              </div>
+        </div>
       </div>
-    </main>
+
+      </main>
   )
   }
 }

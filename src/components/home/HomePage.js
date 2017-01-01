@@ -9,9 +9,8 @@ class HomePage extends React.Component {
         <main>
           <Typist>
               <p>Lauren Beatty <br />
-              Frontend Developer <br />
-            Maple Grove, MN <br />
-          <a href="mailto:lauren.m.beatty@gmail.com">lauren.m.beatty@gmail.com</a>
+              Frontend Developer<br />
+            <a href="mailto:lauren.m.beatty@gmail.com">lauren.m.beatty@gmail.com</a>
             </p>
          </Typist>
        </main>
