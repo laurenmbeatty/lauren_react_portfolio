@@ -412,11 +412,27 @@ body { height: 100%; width: 100%; overflow:hidden;}*/
     text-align: center;
 }
 
+.contact-page-description {
+    font-family: "architects_daughter";
+    font-size: 20px;
+    line-height: 1.75em;
+    color: #c5376d;
+}
+
+.contact-page-description a {
+    color: #c5376d;
+    text-decoration: none;
+}
+
+.contact-page-description a:hover {
+    text-decoration: underline;
+}
+
 .contact-form {
     display: flex;
     justify-content: space-between;
     width: 80%;
-    margin: 5em auto 0 auto;
+    margin: 10em auto 0 auto;
 }
 
 .image {}
@@ -424,12 +440,13 @@ body { height: 100%; width: 100%; overflow:hidden;}*/
 .background-container {
     width: 50px;
     height: 50px;
-    background-color: #c5376d;
+    background-color: #256a98;
     margin-right: 20px;
     border-radius: 50px;
 }
+
 .background-container:hover {
-  background-color: #256a98;
+    background-color: #c5376d;
 }
 
 .background-container i {
