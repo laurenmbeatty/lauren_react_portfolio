@@ -16,7 +16,8 @@ class ContactPage extends React.Component {
     return (
       <main>
         <div className="contact-page-content">
-          <p>I am a frontend developer with a background in biology and opera.</p>
+          <p className="contact-page-description">I'm a frontend developer and serial learner working with a great team at <a href="http://www.fishbowlsolutions.com">Fishbowl Solutions</a>.</p>
+            <p className="contact-page-description">I love being a developer. It gives me the chance to learn something new every day.</p>
           <div className="contact-form">
               <div className="background-container">
                 <div className="image"><a href="mailto:lauren.m.beatty@gmail.com"><i className="fa fa-envelope-o" aria-hidden="true"></i></a></div>

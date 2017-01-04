@@ -197,8 +197,8 @@ main {
 }
 .portfolio-image {
      /*background: url("../public/images/toro-ipad.png") no-repeat;*/
-     background-position: center center;
-     background-size: contain;
+     background-position: center center !important;
+     background-size: contain !important;
      width: 400px;
      height: 288px;
 }
@@ -363,23 +363,37 @@ body { height: 100%; width: 100%; overflow:hidden;}*/
      width: 80%;
      margin: 10em auto 0;
      text-align: center;
+     padding: 0 10px;
+}
+.contact-page-description {
+     font-family: "architects_daughter";
+     font-size: 20px;
+     line-height: 1.75em;
+     color: #c5376d;
+}
+.contact-page-description a {
+     color: #c5376d;
+     text-decoration: none;
+}
+.contact-page-description a:hover {
+     text-decoration: underline;
 }
 .contact-form {
      display: flex;
      justify-content: space-between;
      width: 80%;
-     margin: 5em auto 0 auto;
+     margin: 10em auto 0 auto;
 }
 .image {}
 .background-container {
      width: 50px;
      height: 50px;
-     background-color: #c5376d;
+     background-color: #256a98;
      margin-right: 20px;
      border-radius: 50px;
 }
 .background-container:hover {
-     background-color: #256a98;
+     background-color: #c5376d;
 }
 .background-container i {
      color: papayawhip;
@@ -391,14 +405,53 @@ body { height: 100%; width: 100%; overflow:hidden;}*/
 /*xMain*/
 
 @media screen and (max-width: 600px) {
-     .portfolio-container {
-          justify-content: center;
-          margin-top: 27%;
-     }
+     /*Home Page*/
      .Typist p {
-          font-size: 20px;
+          font-size: 16px;
      }
      .Typist p a {
           font-size: 16px;
+     }
+     /*Portfolio Page*/
+     .portfolio-container {
+          width: 100%;
+          justify-content: center;
+          margin-top: 27%;
+          padding: 0 10px;
+     }
+     .portfolio-item {
+          width: 250px;
+          height: 180px;
+     }
+     .portfolio-image {
+          width: 250px;
+          height: 180px;
+     }
+     .portfolio-button {
+          width: 20px;
+          height: 20px;
+          border-radius: 20px;
+          bottom: 42.5%;
+          left: 89.5%;
+     }
+     .fa.fa-plus {
+          font-size: 12px;
+          text-align: center;
+     }
+     /*Writing Page*/
+     /*Contact Page*/
+     .contact-page-content {
+          width: 100%;
+     }
+     .contact-page-description {
+          font-size: 16px;
+          line-height: 1.5em;
+          color: #c5376d;
+     }
+     .contact-form {
+          margin: 5em auto 0 auto;
+     }
+     .background-container {
+          margin-right: 0;
      }
 }
