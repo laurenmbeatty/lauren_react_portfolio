@@ -3,9 +3,6 @@ import React from 'react';
 class PortfolioItem extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-
-    };
     this.handleClick = this.handleClick.bind(this);
   }
 
@@ -33,16 +30,14 @@ class PortfolioItem extends React.Component {
                   </p>
                   <ul>
                     {skillsStrengthened.map((skillsStrengthened, index) => (
-
                       <li key={index}>{this.props.skillsStrengthened[index]}</li>
-
                     ))}
                   </ul>
               </div>
           </div>
       </div>
-        );
-    };
+    );
+  };
 };
 
 const { string } = React.PropTypes;

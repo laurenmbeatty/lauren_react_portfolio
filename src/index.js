@@ -5,6 +5,6 @@ import { Router, browserHistory } from 'react-router';
 import './index.css';
 
 render(
-    <Router history={browserHistory} routes={routes} />,
+  <Router history={browserHistory} routes={routes} />,
   document.getElementById('root')
 );

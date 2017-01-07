@@ -3,9 +3,6 @@ import React from 'react';
 class Envelope extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-
-    };
 
     // This binding is necessary to make `this` work in the callback
     this.handleClick = this.handleClick.bind(this);

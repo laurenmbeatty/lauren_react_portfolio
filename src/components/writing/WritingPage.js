@@ -12,10 +12,9 @@ class WritingPage extends React.Component {
   }
 
   handleClick(index) {
-      this.setState({
-        activeIndex: index
-      });
-
+    this.setState({
+      activeIndex: index
+    });
   }
 
   render() {
@@ -46,7 +45,7 @@ class WritingPage extends React.Component {
         title: "Introduction to Oracle JET",
         location: "C4 Blog"
       }
-    ]
+    ];
 
     return (
       <main>
