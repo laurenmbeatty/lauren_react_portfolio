@@ -260,12 +260,13 @@ main {
     cursor: pointer;
     outline: none;
 }
+
 .button-icon {
-  position: absolute;
-  top:0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 .portfolio-button.active {
@@ -280,7 +281,7 @@ main {
     line-height: 1.5em;
     transition: all 0.3s ease-in-out;
     position: absolute;
-    top:0;
+    top: 0;
     bottom: 0;
     left: 0;
     right: 0;
@@ -298,11 +299,6 @@ main {
 *, *:before, *:after {
     box-sizing: border-box;
 }
-
-
-/*html { background: radial-gradient(ellipse at top, #40485a 0%, #282e3a 60%);  height: 100%; width: 100%; }
-
-body { height: 100%; width: 100%; overflow:hidden;}*/
 
 .writings-content-wrapper {
     display: flex;
@@ -351,11 +347,6 @@ body { height: 100%; width: 100%; overflow:hidden;}*/
 .card.active {
     top: -20px;
 }
-
-
-/*.envelope:hover .card {
-     top: -20px;
-}*/
 
 .card {
     width: 260px;
