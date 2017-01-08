@@ -20,7 +20,6 @@ class Menu extends React.Component {
               activeState: 'hamburger hamburger--emphatic js-hamburger is-active',
               showMenu: 'slidedown-menu active'
             });
-
         } else {
             this.setState({
               visible: 'site-header',
