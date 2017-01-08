@@ -29,24 +29,24 @@ class PortfolioPage extends React.Component {
     //data
     const portfolioItems = [
       {
+        project: 'Cox Enterprises',
+        backgroundImage: `url(${cox})`,
+        skillsStrengthened: ["HTML", "CSS", "RequireJS", "JavaScript", "jQuery", "Responsive Design", "Cross-Browser and Device Testing"]
+      },
+      {
         project: 'Toro Timecards',
         backgroundImage: `url(${toro})`,
         skillsStrengthened: ["ExtJS", "ColdFusion", "Microsoft SQL", "Sass"]
       },
       {
-        project: 'Anthem, Inc.',
-        backgroundImage: `url(${anthem})`,
-        skillsStrengthened: ["HTML", "CSS", "RequireJS", "Accessibility", "JavaScript", "jQuery", "Cross-Browser Testing"]
-      },
-      {
-        project: 'Cox, Inc.',
-        backgroundImage: `url(${cox})`,
-        skillsStrengthened: ["HTML", "CSS", "RequireJS", "JavaScript", "jQuery", "Responsive Design", "Cross-Browser and Device Testing"]
-      },
-      {
         project: 'Personal Website',
         backgroundImage: `url(${portfolio})`,
         skillsStrengthened: ["React", "ES6", "HTML5", "CSS", "Animations", "JavaScript", "Responsive Design"]
+      },
+      {
+        project: 'Anthem, Inc.',
+        backgroundImage: `url(${anthem})`,
+        skillsStrengthened: ["HTML", "CSS", "RequireJS", "Accessibility", "JavaScript", "jQuery", "Cross-Browser Testing"]
       },
       {
         project: 'Rêve Academy',
