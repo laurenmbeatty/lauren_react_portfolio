@@ -19,9 +19,15 @@ class PortfolioPage extends React.Component {
   }
 
   handleClick(index) {
-    this.setState({
-      activeIndex: index
-    });
+    if(this.state.activeIndex === index){
+      this.setState({
+        activeIndex: null
+      });
+    } else {
+      this.setState({
+        activeIndex: index
+      });
+    }
   }
 
 
